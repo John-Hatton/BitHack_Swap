@@ -55,7 +55,7 @@ implementation of the work in the video. For reference below, see how this magic
 **Remember: XOR is its own inverse:
         (x⊕y)⊕y => x
 
-|     | (Original) | XOR x,y  | XOR y,x  | XOR x,y  |
+|     | (Original) | XOR x,y  | XOR x,y  | XOR x,y  |
 |-----|------------|----------|----------|----------|
 | x   | 10111101   | 10010011 | 10010011 | 00101110 |
 | y   | 00101110   | 00101110 | 10111101 | 10111101 |
