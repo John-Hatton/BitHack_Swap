@@ -80,4 +80,13 @@ is integrated into the project with CMake, we can Unit Test our Assembly Code!!!
 You might have noticed that there are some striking similarities between this and my 
 Unit_Testing_NASM_with_GTest or whatever it's called. Lol
 
+---
+
+## Parallelism Note...
+
+Poor at exploiting instruction-level parallelism (ILP).
+
+If we were hoping to implement some sort of Instruction-Level Parallelism, this code is 
+gonna be slower, because with our temp variable, we wouldn't be accessing the same memory
+address from different registers...
 
