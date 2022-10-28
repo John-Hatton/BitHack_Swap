@@ -8,9 +8,10 @@
     + [Truth Table](#truth-table)
 * [Unit Testing](#unit-testing)
 
-
-![Julian_Shun](assets/images/Julian_Shun.png)
 ---
+<br />
+<a href="https://www.youtube.com/watch?v=ZusiKXcz_ac&t=1179s"><img src="assets/images/Julian_Shun.png" alt="3. Bit Hacks"></a>
+
 ## Introduction
 
 ### MIT OpenCourseWare!!!
