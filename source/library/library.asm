@@ -41,6 +41,17 @@ println:
 
 bitHackSwap:
 
-        ; Two Parameters, X and Y
+        ; Two Parameters, X and Y Remember ...
+          ;
+          ;    rdi -- First Param.
+          ;    rsi -- Second Param.
+
+
+        xor     rdi, rsi
+        xor     rsi, rdi
+        xor     rdi, rsi
+
+        ; Well it seems this project was doomed from the start, but it was a lot of fun to write!
+        ; Nothing goes to waste!
 
         ret
