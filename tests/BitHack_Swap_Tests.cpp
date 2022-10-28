@@ -9,9 +9,12 @@
 #include "../source/library/library.hpp"
 
 
-TEST(fooBar_Test, Demonstrate_Whether_FooBar_Is_Valid)
+TEST(bitHackSwap_Test, Demonstrate_Whether_BitHackSwap_Is_Valid)
 {
-    long x = fooBar();
+    int x = 5;
+    int y = 6;
 
-    EXPECT_EQ(x, 31);
+    bitHackSwap(x, y);
+
+    EXPECT_EQ(x, 6);
 }
