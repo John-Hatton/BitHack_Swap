@@ -45,23 +45,20 @@ bitHackSwap:
           ;
           ;    rdi -- First Param.
           ;    rsi -- Second Param.
+        mov r13, [rdi]
+        mov r15, [rsi]
 
-
-        xor     rdi, rsi
-        xor     rsi, rdi
-        xor     rdi, rsi
+        xor     r13, r15
+        xor     r15, r13
+        xor     r13, r15
 
         ; Well it seems this project was doomed from the start, but it was a lot of fun to write!
         ; Nothing goes to waste!
         ; So much for it being doomed! I found a way to do it!!!
 
-	; In the disassembled code, we move the second argument to edx, and the first argument to eax.
-	; This means if x = 5 when we start, we want it to equal 6 when we finish.
-	; When we first start, rdi is 5. That means after the swap rdi is now 6, and we can move it
-	; back to eax. Similarly we must move the value of rsi back to edx, ie 5 goes to edx.
 
-	mov DWORD [rbp-0x18], edi
-	mov DWORD [rbp-0x20], esi
+	    mov DWORD [rdx], r15d
+	    mov DWORD [rax], r13d
 
 
         ret
