@@ -53,17 +53,15 @@ bitHackSwap:
 
         ; Well it seems this project was doomed from the start, but it was a lot of fun to write!
         ; Nothing goes to waste!
-
-
         ; So much for it being doomed! I found a way to do it!!!
-
 
 	; In the disassembled code, we move the second argument to edx, and the first argument to eax.
 	; This means if x = 5 when we start, we want it to equal 6 when we finish.
 	; When we first start, rdi is 5. That means after the swap rdi is now 6, and we can move it
 	; back to eax. Similarly we must move the value of rsi back to edx, ie 5 goes to edx.
-	mov DWORD [rbp-0x8], edi
-	mov DWORD [rbp-0x10], esi
+
+	mov DWORD [rbp-0x18], edi
+	mov DWORD [rbp-0x20], esi
 
 
         ret

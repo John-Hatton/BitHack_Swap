@@ -14,6 +14,12 @@ int main()
     println("Ich drücke mal Textzeilen vom C++ mit Assembly aus!!!"); // I'm printing lines of text with assembly!!!
 
 
+
+    // These are essentially no-operations, because we have to align our stack to line up with gtest stack
+    
+    int* a = new int();
+    int* b = new int();
+
     int* x = new int();
     int* y = new int();
 
