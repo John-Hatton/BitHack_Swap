@@ -57,8 +57,7 @@ bitHackSwap:
         ; So much for it being doomed! I found a way to do it!!!
 
 
-	    mov DWORD [rdx], r15d
-	    mov DWORD [rax], r13d
-
-
+	    mov DWORD [rdx], r15d ; the ptr in rdx points to the stack address where arg1 is stored
+	    mov DWORD [rax], r13d ; the ptr in rax points to the stack address where arg2 is stored
+	    
         ret
