@@ -16,7 +16,7 @@ extern "C"
         // Function names should correspond with the globally declared subroutine names from the assembly file
 
 
-        void bitHackSwap(int x, int y);
+        void bitHackSwap(int* x, int* y);
 
         void println(const char*);
 
@@ -24,3 +24,4 @@ extern "C"
 } //End of extern "C" bloc
 #endif //__cplusplus
 
+// Can define regular C++ classes here

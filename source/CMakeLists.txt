@@ -28,7 +28,7 @@ set(IS_DEBUG_BUILD CMAKE_BUILD_TYPE STREQUAL "Debug")
 
 # Indication to the code that this is a debug build
 if (${IS_DEBUG_BUILD})
-    set(CMAKE_ASM_NASM_FLAGS "-dDEBUG")
+    set(CMAKE_ASM_NASM_FLAGS "-g -dDEBUG")
 endif ()
 
 
