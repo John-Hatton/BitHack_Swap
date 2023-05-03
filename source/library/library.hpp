@@ -16,7 +16,7 @@ extern "C"
         // Function names should correspond with the globally declared subroutine names from the assembly file
 
 
-        void bitHackSwap(int* x, int* y);
+        void bitHackSwap(int* ptrX, int* ptrY);
 
         void println(const char*);
 

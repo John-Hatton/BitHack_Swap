@@ -11,13 +11,12 @@
 
 TEST(bitHackSwap_Test, Demonstrate_Whether_BitHackSwap_Is_Valid)
 {
-    int* x = new int();
-    int* y = new int();
+    int x = 5;
+    int y = 6;
+    int* pX = &x;
+    int* pY = &y;
 
-    *x = 5;
-    *y = 6;
+    bitHackSwap(pX, pY);
 
-    bitHackSwap(x, y);
-
-    EXPECT_EQ(*x, 6);
+    EXPECT_EQ(x, 6);
 }

@@ -8,25 +8,19 @@
 #include <iostream>
 
 int main()
-
 {
-    println("Hallo Welt");
-    println("Ich drücke mal Textzeilen vom C++ mit Assembly aus!!!"); // I'm printing lines of text with assembly!!!
+    char returnString[100];
 
+    int x = 5;
+    int y = 6;
 
-    int* x = new int();
-    int* y = new int();
+    int* pX = &x;
+    int* pY = &y;
 
-    *x = 5;
-    *y = 6;
+    bitHackSwap(pX, pY);
 
-//    int x = 5;
-//    int y = 6;
-
-    bitHackSwap(x, y);
-
-
-    std::cout << "The Value of X is: " << *x << "\n and the value of Y is: " << *y << std::endl;
+    sprintf(returnString, "The value of X is: %d, and the value of Y is: %d!", x, y);
+    println(returnString);
 
     return 0;
 }
