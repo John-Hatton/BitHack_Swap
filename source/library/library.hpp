@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BITHACK_SWAP_LIBRARY_HPP
+#define BITHACK_SWAP_LIBRARY_HPP
 
 #ifdef __cplusplus
 #include <cstdint>
@@ -18,6 +19,10 @@ extern "C"
 
         void bitHackSwap(int* ptrX, int* ptrY);
 
+
+        void holdUp(int waitMillis);
+
+        void print(const char*);
         void println(const char*);
 
 #ifdef __cplusplus
@@ -25,3 +30,7 @@ extern "C"
 #endif //__cplusplus
 
 // Can define regular C++ classes here
+
+
+
+#endif //BITHACK_SWAP_LIBRARY_HPP
