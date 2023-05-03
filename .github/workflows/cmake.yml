@@ -30,7 +30,7 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: cmake -G "Unix Makefiles" --build ${{github.workspace}}/build --config Debug
+      run: cmake -G "Unix Makefiles" --build ${{github.workspace}}/build
 
     - name: Test
       working-directory: ${{github.workspace}}/build
