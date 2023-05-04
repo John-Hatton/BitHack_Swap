@@ -34,5 +34,9 @@ endif ()
 
 
 add_library(BitHack_Swap_lib library/library.asm library/library.hpp)
+add_library(HugeInt_lib STATIC IMPORTED)
+set_property(TARGET HugeInt_lib PROPERTY IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/library/HugeInt/lib/libHugeInt_lib.a)
+
 add_executable(BitHack_Swap main.cpp)
 target_link_libraries(BitHack_Swap BitHack_Swap_lib)
+target_link_libraries(BitHack_Swap HugeInt_lib)

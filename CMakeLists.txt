@@ -7,9 +7,13 @@ project(BitHack_Swap)
 
 set(CMAKE_CXX_STANDARD 20)
 
+include_directories(library)
+
 
 add_subdirectory(source)
 add_subdirectory(tests)
+
+
 
 
 #include_directories(${BitHack_Swap_SOURCE_DIR}/include)

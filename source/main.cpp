@@ -4,6 +4,8 @@
 
 #include "library/library.hpp"
 #include <iostream>
+#include <sstream>
+
 
 int main()
 {
@@ -13,16 +15,19 @@ int main()
 
     println("");
 
-    int x;
-    int y;
-    char returnString[100];
 
-    print("Enter a value for x: "); std::cin >> x;
-    print("Enter a value for y: "); std::cin >> y;
+    auto x = new HugeInt();
+    auto y = new HugeInt();
+
+    std::string xVal;
+    std::string yVal;
+
+    print("Enter a value for x: "); std::cin >> xVal;
+    print("Enter a value for y: "); std::cin >> yVal;
     println("");
 
-    int* pX = &x;
-    int* pY = &y;
+    x->setValue(xVal);
+    y->setValue(yVal);
 
     print("Swapping....."); fflush(stdout); holdUp(1000);
     print("...");           fflush(stdout); holdUp(500);
@@ -33,9 +38,18 @@ int main()
     print("....");          fflush(stdout); holdUp(500);
     println("DONE!!!\n");
 
-    bitHackSwap(pX, pY);
+    bitHackSwap(x, y);
 
-    sprintf(returnString, "The value of x is: %d, and the value of y is: %d!", x, y);
+    std::stringstream ss;
+    ss << x->to_string();
+    ss << y->to_string();
+    ss << "The value of x is: %s, and the value of y is: %s!";
+    std::string tostr = ss.str();
+    int strlength = tostr.length();
+
+    char returnString[strlength];
+
+    sprintf(returnString, "The value of x is: %s, and the value of y is: %s!", x->to_string(), y->to_string());
     println(returnString);
 
     return 0;

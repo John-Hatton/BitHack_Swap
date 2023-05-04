@@ -1,0 +1,4 @@
+libHugeInt_lib.a
+version 0.5.2
+
+See Releases on Github. Place libHugeInt_lib.a in this folder

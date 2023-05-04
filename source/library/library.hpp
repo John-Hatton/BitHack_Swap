@@ -3,6 +3,7 @@
 
 #ifdef __cplusplus
 #include <cstdint>
+#include <HugeInt/HugeInt.h>
 extern "C"
 {
 #else //is pure C
@@ -17,7 +18,7 @@ extern "C"
         // Function names should correspond with the globally declared subroutine names from the assembly file
 
 
-        void bitHackSwap(int* ptrX, int* ptrY);
+        void bitHackSwap(HugeInt* x, HugeInt* y);
 
 
         void holdUp(int waitMillis);

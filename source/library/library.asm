@@ -108,13 +108,15 @@ bitHackSwap:
           ;    rdi -- First Param.
           ;    rsi -- Second Param.
 
-        ; Move the values pointed to by rdi and rsi to r13 and r15 respectively
-        mov r13, [rdi]
-        mov r15, [rsi]
+        mov r13, QWORD [rdi]
+        mov r15, QWORD [rsi]
 
-        xor     rsi, rdi
+        xor     rsi, rdi        ; Evil Bit Hack
         xor     rdi, rsi
         xor     rsi, rdi
+
+        ; Move the values pointed to by rdi and rsi to r13 and r15 respectively
+
 
         ; Move the immediate values back from r13 and r15 to rdi and rsi (after swap)
 	    mov DWORD [rdi], r13d ; the ptr in rdi points to the stack address where our immediate X is stored
